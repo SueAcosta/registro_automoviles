@@ -13,12 +13,14 @@ $db = $database->getConnection();
 $automovil = new Automovil($db);
 
 // Obtener los datos del formulario
-$automovil->marca = $_POST['marca'];
-$automovil->modelo = $_POST['modelo'];
-$automovil->anio = $_POST['anio'];
-$automovil->color = $_POST['color'];
-$automovil->placa = $_POST['placa'];
-
+$automovil->placa = htmlspecialchars(strip_tags($_POST['placa']));
+$automovil->marca = htmlspecialchars(strip_tags($_POST['marca']));
+$automovil->modelo = htmlspecialchars(strip_tags($_POST['modelo']));
+$automovil->anio = htmlspecialchars(strip_tags($_POST['anio']));
+$automovil->color = htmlspecialchars(strip_tags($_POST['color']));
+$automovil->n_motor = htmlspecialchars(strip_tags($_POST['n_motor']));
+$automovil->n_chasis = htmlspecialchars(strip_tags($_POST['n_chasis']));
+$automovil->t_auto = htmlspecialchars(strip_tags($_POST['t_auto']));
 
 // Registrar el automóvil
 if ($automovil->registrar()) {

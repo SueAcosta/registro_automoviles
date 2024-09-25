@@ -28,6 +28,19 @@
             <label for="color">Color:</label>
             <input type="text" id="color" name="color" required>
 
+            <label for="n_motor">Número de Motor:</label>
+            <input type="text" id="n_motor" name="n_motor" required>
+
+            <label for="n_chasis">Número de Chasis:</label>
+            <input type="text" id="n_chasis" name="n_chasis" required>
+
+            <label for="t_auto">Tipo de Automóvil:</label>
+            <select id="t_auto" name="t_auto" required>
+                <option value="1">Sedán</option>
+                <option value="2">SUV</option>
+                <option value="3">Camioneta</option>
+                <!-- Añade más opciones según los tipos disponibles en tu base de datos -->
+            </select>
 
             <input type="submit" value="Registrar">
         </form>

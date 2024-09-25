@@ -13,17 +13,20 @@ $db = $database->getConnection();
 // Crear una instancia de la clase Automovil
 $automovil = new Automovil($db);
 
+// Asignar los valores de los campos del formulario
 $automovil->placa = htmlspecialchars(strip_tags($_POST['placa']));
 $automovil->marca = htmlspecialchars(strip_tags($_POST['marca']));
 $automovil->modelo = htmlspecialchars(strip_tags($_POST['modelo']));
 $automovil->anio = htmlspecialchars(strip_tags($_POST['anio']));
 $automovil->color = htmlspecialchars(strip_tags($_POST['color']));
-
+$automovil->n_motor = htmlspecialchars(strip_tags($_POST['n_motor']));
+$automovil->n_chasis = htmlspecialchars(strip_tags($_POST['n_chasis']));
+$automovil->t_auto = htmlspecialchars(strip_tags($_POST['t_auto']));
 
 // Actualizar los datos del automóvil
 if ($automovil->actualizarAutomovil()) {
-    echo "se actualizo corre";
-    // Redirigir al index o mostrar mensaje
+    echo "El automóvil se actualizó correctamente.";
+    // Redirigir al index o mostrar un mensaje adicional si lo necesitas
 } else {
     echo "Error al actualizar el automóvil.";
 }
