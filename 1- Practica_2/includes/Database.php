@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = "localhost:3307";
-    private $db_name = "autos";
+    private $db_name = "gestion_automoviles";
     private $username = "root"; // Cambia a tu nombre de usuario de MySQL
     private $password = ""; // Cambia a tu contraseña de MySQL
     private $conn;
